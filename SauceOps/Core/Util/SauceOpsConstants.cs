@@ -48,8 +48,8 @@
         internal const string SAUCE_VUOP_CAPABILITY = "videoUploadOnPass";
         
         //SAUCE ENVIRONMENT VARIABLES
-        internal const string SAUCE_USER_NAME = "SAUCE_USER_NAME";
-        internal const string SAUCE_API_KEY = "SAUCE_API_KEY";
+        internal const string SAUCE_USER_NAME = "OPSENG_SAUCE_USER_NAME";
+        internal const string SAUCE_API_KEY = "OPSENG_SAUCE_API_KEY";
         internal const string SAUCE_ONDEMAND_BROWSERS = "SAUCE_ONDEMAND_BROWSERS";
         internal const string SAUCE_NATIVE_APP = "SAUCE_NATIVE_APP";
         internal const string SAUCE_USE_CHROME_ON_ANDROID = "SAUCE_USE_CHROME_ON_ANDROID";
