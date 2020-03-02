@@ -7,29 +7,38 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  name: Azure Pipelines
+  demands:
+  - msbuild
+  - visualstudio
+  - vstest
+
+variables:
+  BuildPlatform: 'any cpu'
+  BuildConfiguration: 'release'
 
 steps:
-- task: DotNetCoreCLI@2
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.4.1'
   inputs:
-    command: 'build'
-    projects: 'SauceOpsMobile.sln'
-    arguments: '-c Release'
+    versionSpec: 4.4.1
 
-- task: DotNetCoreCLI@2
-  env:
-    OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
-    OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
   inputs:
-    command: 'test'
-    projects: 'UnitTests/UnitTests.csproj'
-    arguments: '-c Release'
+    restoreSolution: '**\*.sln'
 
-- task: DotNetCoreCLI@2
-  env:
-    OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
-    OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
+- task: VSBuild@1
+  displayName: 'Build solution'
   inputs:
-    command: 'test'
-    projects: 'SauceOps/SauceOps.csproj'
-    arguments: '-c Release'
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+
+- task: VSTest@2
+  displayName: 'Test Assemblies'
+  inputs:
+    testAssemblyVer2: |
+     **\$(BuildConfiguration)\UnitTests.dll
+     !**\obj\**
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
