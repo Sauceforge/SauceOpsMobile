@@ -3,6 +3,7 @@ using NUnit.Framework.Interfaces;
 using UnitTests.Issue1118;
 
 namespace UnitTests {
+    [TestFixture]
     public class TestFixtureSourceTests {
         [Test]
         public void Issue1118() {

@@ -2,7 +2,6 @@
     internal class Saucery3Constants : SauceOpsConstants {
         //ACTIVATION DETAILS
         internal const string PRODUCTNAME = "Saucery3";
-        internal const string VERSION = "3.0.0.0";
     }
 }
 /*

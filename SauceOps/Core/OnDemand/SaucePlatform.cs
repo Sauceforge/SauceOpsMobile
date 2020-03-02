@@ -34,12 +34,12 @@ namespace SauceOps.Core.OnDemand {
         //    //OnceOnlyMessages.OnDemand();
         //}
 
-        public SaucePlatform(string os, string platform, string browser, string browserVersion, string longName,
+        public SaucePlatform(string mobilePlatformName, string platform, string browser, string browserVersion, string longName,
             string longVersion, string url, string device, string deviceOrientation) {
-            Os = os;
-            Platform = platform;
+			Os = mobilePlatformName;
             Browser = browser;
             BrowserVersion = browserVersion;
+            Platform = platform;
             LongName = longName;
             LongVersion = longVersion;
             Url = url;

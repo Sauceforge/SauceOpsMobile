@@ -24,14 +24,6 @@ namespace SauceOps.Core.Util {
             }
         }
 
-        //private static void NewVersionAvailable() {
-        //    if (NuGetHelper.IsNewVersionAvailable()) {
-        //        var installed = NuGetHelper.GetInstalledVersion();
-        //        var max = NuGetHelper.GetMaxVersion();
-        //        OnceOnlyWriter.WriteLine(SauceOpsConstants.NEW_VERSION_AVAILABLE, installed, max);
-        //    }
-        //}
-
         public static void UsingLicenced() {
             OnceOnlyWriter.WriteLine(SauceOpsConstants.LICENCED_VERSION, Saucery3Constants.PRODUCTNAME);
         }

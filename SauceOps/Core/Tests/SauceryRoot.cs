@@ -26,8 +26,6 @@ namespace SauceOps.Core.Tests {
         }
 
         static SauceryRoot() {
-            OnceOnlyMessages.TestingOn(JsonConvert.DeserializeObject<List<SaucePlatform>>(Enviro.SauceOnDemandBrowsers));
-            OnceOnlyMessages.OnDemand();
             SauceLabsStatusNotifier = new SauceLabsStatusNotifier();
             SauceLabsFlowController = new SauceLabsFlowController();
         }

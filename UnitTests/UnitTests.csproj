@@ -86,7 +86,7 @@
     <Compile Include="RestAPI\TestStatus\Base\StatusNotifier.cs" />
     <Compile Include="RestAPI\TestStatus\SauceLabsStatusNotifier.cs" />
     <Compile Include="RESTTests.cs" />
-    <Compile Include="SauceryConstants.cs" />
+    <Compile Include="SauceOpsConstants.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="TestFixtureSourceTests.cs" />
     <Compile Include="TestUtilities.cs" />

@@ -1,10 +1,12 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Shouldly;
+using System;
 using UnitTests.RestAPI.FlowControl;
 using UnitTests.RestAPI.RecommendedAppiumVersion;
 
-namespace UnitTests {
+namespace UnitTests
+{
+    [TestFixture]
     public class RestTests {
         static RestTests() {
             //Console.WriteLine(@"In RestTests static");

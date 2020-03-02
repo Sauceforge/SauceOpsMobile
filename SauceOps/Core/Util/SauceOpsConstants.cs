@@ -53,8 +53,7 @@
         internal const string SAUCE_ONDEMAND_BROWSERS = "SAUCE_ONDEMAND_BROWSERS";
         internal const string SAUCE_NATIVE_APP = "SAUCE_NATIVE_APP";
         internal const string SAUCE_USE_CHROME_ON_ANDROID = "SAUCE_USE_CHROME_ON_ANDROID";
-        internal const string JENKINS_BUILD_NUMBER = "JENKINS_BUILD_NUMBER";
-        internal const string BAMBOO_BUILD_NUMBER = "SAUCE_BAMBOO_BUILDNUMBER";
+        internal const string BUILD_NUMBER = "BUILD_BUILDNUMBER";
         internal const string RECOMMENDED_APPIUM_VERSION = "RECOMMENDED_APPIUM_VERSION";
 
         //TUNNELLING

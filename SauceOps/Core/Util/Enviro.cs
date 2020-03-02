@@ -29,11 +29,7 @@ namespace SauceOps.Core.Util {
 
         internal static string BuildNumber
         {
-            get
-            {
-                var jenkins = JenkinsBuildNumber;
-                return !string.IsNullOrEmpty(jenkins) ? jenkins : BambooBuildNumber;
-            }
+            get { return GetStringVar(SauceOpsConstants.BUILD_NUMBER); }
         }
 
         public static string RecommendedAppiumVersion
@@ -46,16 +42,6 @@ namespace SauceOps.Core.Util {
                 //Set it
                 Environment.SetEnvironmentVariable(variableName, value);
             }
-        }
-
-        private static string JenkinsBuildNumber
-        {
-            get { return GetStringVar(SauceOpsConstants.JENKINS_BUILD_NUMBER); }
-        }
-
-        private static string BambooBuildNumber
-        {
-            get { return GetStringVar(SauceOpsConstants.BAMBOO_BUILD_NUMBER); }
         }
 
         private static string GetStringVar(string envVar) {

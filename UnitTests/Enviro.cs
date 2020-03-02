@@ -12,13 +12,8 @@ namespace UnitTests {
 
         internal static bool SauceUseChromeOnAndroid => GetBoolVar(SauceOpsConstants.SAUCE_USE_CHROME_ON_ANDROID);
 
-        internal static string BuildNumber {
-            get {
-                var jenkins = JenkinsBuildNumber;
-                return !string.IsNullOrEmpty(jenkins) ? jenkins : BambooBuildNumber;
-            }
-        }
-
+        public static string BuildNumber => GetStringVar(SauceOpsConstants.BUILD_NUMBER);
+        
         public static string RecommendedAppiumVersion => GetStringVar(SauceOpsConstants.RECOMMENDED_APPIUM_VERSION);
 
         public static void SetVar(string variableName, string value) {
@@ -27,10 +22,6 @@ namespace UnitTests {
                 Environment.SetEnvironmentVariable(variableName, value);
             }
         }
-
-        private static string JenkinsBuildNumber => GetStringVar(SauceOpsConstants.JENKINS_BUILD_NUMBER);
-
-        private static string BambooBuildNumber => GetStringVar(SauceOpsConstants.BAMBOO_BUILD_NUMBER);
 
         private static string GetStringVar(string envVar) {
             return envVar == null ? null : Environment.GetEnvironmentVariable(envVar);
