@@ -6,8 +6,6 @@
 trigger:
 - master
 
-
-
 pool:
   vmImage: 'windows-latest'
   name: Azure Pipelines
@@ -38,10 +36,19 @@ steps:
     configuration: '$(BuildConfiguration)'
 
 - task: VSTest@2
-  displayName: 'Test Assemblies'
+  displayName: 'Unit Test'
   inputs:
     testAssemblyVer2: |
      **\$(BuildConfiguration)\UnitTests.dll
+     !**\obj\**
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+
+- task: VSTest@2
+  displayName: 'Functional Test'
+  inputs:
+    testAssemblyVer2: |
+     **\$(BuildConfiguration)\SauceOps.dll
      !**\obj\**
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
