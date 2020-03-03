@@ -37,6 +37,9 @@ steps:
 
 - task: VSTest@2
   displayName: 'Unit Test'
+  env:
+    OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
+    OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
   inputs:
     testAssemblyVer2: |
      **\$(BuildConfiguration)\UnitTests.dll
@@ -46,6 +49,9 @@ steps:
 
 - task: VSTest@2
   displayName: 'Functional Test'
+  env:
+    OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
+    OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
   inputs:
     testAssemblyVer2: |
      **\$(BuildConfiguration)\SauceOps.dll
