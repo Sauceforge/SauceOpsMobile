@@ -34,11 +34,6 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-- task: PowerShell@2
-  inputs:
-    filePath: 'runTests.ps1'
-  displayName: 'Install NUnit Console'
-
 - task: VSTest@2
   displayName: 'Unit Test'
   env:
@@ -51,13 +46,13 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-
-- task: BatchScript@1
+- task: PowerShell@2
+  displayName: 'Run Functional Tests'
   env:
     OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
     OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
   inputs:
-    filename: runFunctionalTests.bat
+    filePath: 'runTests.ps1'
 
 #- task: VSTest@2
 #  displayName: 'Functional Test'
