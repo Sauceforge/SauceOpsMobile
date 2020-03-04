@@ -21,7 +21,7 @@ $nuget = "$SolutionDir\.nuget\nuget.exe"
 $nunit = "$PackagesDir\NUnit.ConsoleRunner\tools\nunit3-console.exe"
 
 #Find tests in OutDir
-$tests = SauceOps.dll)
+$tests = SauceOps.dll
 
 # Run NUnit3 tests
 & $nunit $tests --noheader --framework=net-4.7 --work=$OutDir
