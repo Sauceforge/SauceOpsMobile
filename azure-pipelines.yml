@@ -8,7 +8,6 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-  name: Azure Pipelines
   demands:
   - msbuild
   - visualstudio
@@ -35,6 +34,11 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
+- task: PowerShell@2
+  inputs:
+    filePath: 'installNUnitConsole.ps1'
+  displayName: 'Install NUnit Console'
+
 - task: VSTest@2
   displayName: 'Unit Test'
   env:
@@ -47,14 +51,22 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-- task: VSTest@2
-  displayName: 'Functional Test'
+
+- task: BatchScript@1
   env:
     OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
     OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
   inputs:
-    testAssemblyVer2: |
-     **\$(BuildConfiguration)\SauceOps.dll
-     !**\obj\**
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
+    filename: runFunctionalTests.bat
+
+#- task: VSTest@2
+#  displayName: 'Functional Test'
+#  env:
+#    OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
+#    OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
+#  inputs:
+#    testAssemblyVer2: |
+#     **\$(BuildConfiguration)\SauceOps.dll
+#     !**\obj\**
+#    platform: '$(BuildPlatform)'
+#    configuration: '$(BuildConfiguration)'
