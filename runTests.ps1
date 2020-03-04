@@ -26,4 +26,5 @@ $nunit = "$PackagesDir\NUnit.ConsoleRunner\tools\nunit3-console.exe"
 $tests = "$OutDir\SauceOps.dll"
 
 # Run NUnit3 tests
-& $nunit $tests --noheader --framework=net-4.7 --work=$OutDir
+#& $nunit $tests --noheader --framework=net-4.7 --work=$OutDir
+& $nunit $tests --result:junit-selenium-testsuite.xml;transform=nunit3-junit.xslt --trace=Verbose
