@@ -46,22 +46,22 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-- task: PowerShell@2
-  displayName: 'Run Functional Tests'
-  env:
-    OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
-    OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
-  inputs:
-    filePath: 'runTests.ps1'
-
-#- task: VSTest@2
-#  displayName: 'Functional Test'
+#- task: PowerShell@2
+#  displayName: 'Run Functional Tests'
 #  env:
 #    OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
 #    OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
 #  inputs:
-#    testAssemblyVer2: |
-#     **\$(BuildConfiguration)\SauceOps.dll
-#     !**\obj\**
-#    platform: '$(BuildPlatform)'
-#    configuration: '$(BuildConfiguration)'
+#    filePath: 'runTests.ps1'
+
+- task: VSTest@2
+  displayName: 'Functional Test'
+  env:
+    OPSENG_SAUCE_API_KEY: $(OPSENG_SAUCE_API_KEY)
+    OPSENG_SAUCE_USER_NAME: $(OPSENG_SAUCE_USER_NAME)
+  inputs:
+    testAssemblyVer2: |
+     **\$(BuildConfiguration)\SauceOps.dll
+     !**\obj\**
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
