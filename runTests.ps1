@@ -13,6 +13,8 @@ $ProjectDir = "$SolutionDir\SauceOps"
 $PackagesDir = "$ProjectDir\packages"
 $OutDir = "$ProjectDir\bin\Release"
 
+Get-ChildItem env:
+
 # Install NUnit Test Runner
 $nuget = "$SolutionDir\.nuget\nuget.exe"
 & $nuget install NUnit.Runners -ExcludeVersion -o $PackagesDir
