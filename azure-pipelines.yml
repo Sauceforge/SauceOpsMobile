@@ -65,3 +65,5 @@ steps:
      !**\obj\**
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
+    diagnosticsEnabled: true
+

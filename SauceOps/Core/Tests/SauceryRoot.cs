@@ -1,16 +1,14 @@
-﻿using Newtonsoft.Json;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium.Remote;
 using SauceOps.Core.Capabilities;
 using SauceOps.Core.OnDemand;
 using SauceOps.Core.RestAPI.FlowControl;
 using SauceOps.Core.RestAPI.RecommendedAppiumVersion;
 using SauceOps.Core.RestAPI.TestStatus;
-using SauceOps.Core.Util;
-using System.Collections.Generic;
 
-namespace SauceOps.Core.Tests {
-    [TestFixture]
+namespace SauceOps.Core.Tests
+{
+    //[TestFixture] //Don't seem to need this.
     //[Parallelizable(ParallelScope.Fixtures)]
     public abstract class SauceryRoot {
         protected string TestName;
