@@ -128,7 +128,6 @@
     <Compile Include="Core\Util\WebControl.cs" />
     <Compile Include="YourTests\PageObjects\GuineaPigPage.cs" />
     <Compile Include="YourTests\Tests\OpenSauceFixture.cs" />
-    <Compile Include="YourTests\Tests\OpenSauceFixture2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
