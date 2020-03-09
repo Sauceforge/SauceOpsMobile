@@ -14,7 +14,7 @@ pool:
   - vstest
 
 variables:
-  BuildPlatform: 'any cpu'
+  BuildPlatform: 'Any CPU'
   BuildConfiguration: 'release'
 
 steps:
@@ -42,7 +42,6 @@ steps:
   inputs:
     testAssemblyVer2: |
      **\$(BuildConfiguration)\UnitTests.dll
-     !**\obj\**
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
@@ -62,8 +61,8 @@ steps:
   inputs:
     testAssemblyVer2: |
      **\$(BuildConfiguration)\SauceOps.dll
-     !**\obj\**
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
     diagnosticsEnabled: true
+    vsTestVersion: '15.0'
 
