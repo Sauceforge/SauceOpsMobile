@@ -63,6 +63,6 @@ steps:
      **\$(BuildConfiguration)\SauceOps.dll
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
-    diagnosticsEnabled: true
+    diagnosticsEnabled: false
     vsTestVersion: '15.0'
 
