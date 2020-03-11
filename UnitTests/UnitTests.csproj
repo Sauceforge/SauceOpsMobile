@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOSFactoryVersionTests.cs" />
     <Compile Include="AndroidFactoryVersionTests.cs" />
     <Compile Include="Enviro.cs" />
     <Compile Include="Issue1118\Issue1118Root.cs" />
