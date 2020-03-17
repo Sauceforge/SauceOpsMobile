@@ -12,7 +12,7 @@ namespace SauceOps.Core.Capabilities.ConcreteProducts {
             : base(testName)
         {
             var nativeApp = Enviro.SauceNativeApp;
-            var useChromeOnAndroid = Enviro.SauceUseChromeOnAndroid;
+            //var useChromeOnAndroid = Enviro.SauceUseChromeOnAndroid;
             Console.WriteLine(SauceOpsConstants.SETTING_UP, testName, SauceOpsConstants.ANDROID_ON_APPIUM);
             //Caps = DesiredCapabilities.Android();
             Caps = new DesiredCapabilities();
