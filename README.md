@@ -2,7 +2,7 @@
 Example of how to integrate Azure DevOps with SauceLabs Mobile Platforms in lieu of an Azure DevOps SauceLabs plugin.
 
 ## How To
-1. Go to aaucelabs.com and sign up.
+1. Go to [SauceLabs](https://saucelabs.com) and sign up.
 2. Clone [SauceOpsMobile](https://github.com/Sauceforge/SauceOpsMobile) and commit to Azure Repos in your Azure DevOps project.
 3. Add two *private variables* to your pipeline:
 
