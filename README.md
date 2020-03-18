@@ -13,4 +13,4 @@ Example of how to integrate Azure DevOps with SauceLabs Mobile Platforms in lieu
 
 4. Write your Page Objects [here](https://github.com/Sauceforge/SauceOpsMobile/tree/master/SauceOps/YourTests/PageObjects).
 5. Write your Tests [here](https://github.com/Sauceforge/SauceOpsMobile/tree/master/SauceOps/YourTests/Tests).
-6. Specify the platforms you wish to test on [here](https://github.com/Sauceforge/SauceOpsMobile/blob/master/SauceOps/Core/DataSources/PlatformTestData.cs).
+6. Specify the platforms you wish to test on [here](https://github.com/Sauceforge/SauceOpsMobile/blob/master/SauceOps/Core/DataSources/PlatformTestData.cs). 

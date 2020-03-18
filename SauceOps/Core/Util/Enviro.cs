@@ -27,9 +27,9 @@ namespace SauceOps.Core.Util {
             get { return GetBoolVar(SauceOpsConstants.SAUCE_USE_CHROME_ON_ANDROID); }
         }
 
-        internal static string BuildNumber
+        internal static string BuildName
         {
-            get { return GetStringVar(SauceOpsConstants.BUILD_NUMBER); }
+            get { return string.Format("Mobile_{0}", GetStringVar(SauceOpsConstants.BUILD_NUMBER)); }
         }
 
         public static string RecommendedAppiumVersion

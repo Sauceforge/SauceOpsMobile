@@ -18,7 +18,7 @@ namespace SauceOps.Core.Capabilities.Base
             //This sets the Session column
             Caps.SetCapability(SauceOpsConstants.SAUCE_SESSIONNAME_CAPABILITY, _testName);
             //This sets the Build column
-            Caps.SetCapability(SauceOpsConstants.SAUCE_BUILDNAME_CAPABILITY, Enviro.BuildNumber);
+            Caps.SetCapability(SauceOpsConstants.SAUCE_BUILDNAME_CAPABILITY, Enviro.BuildName);
             //Improve performance on SauceLabs
             Caps.SetCapability(SauceOpsConstants.SAUCE_VUOP_CAPABILITY, false);
             //Caps.SetCapability(Constants.VISIBILITY_KEY, Constants.VISIBILITY_TEAM);

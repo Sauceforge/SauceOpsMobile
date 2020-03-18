@@ -1,6 +1,4 @@
 ﻿using System;
-using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Remote;
 using SauceOps.Core.Capabilities.Base;
 using SauceOps.Core.OnDemand;
@@ -11,9 +9,6 @@ namespace SauceOps.Core.Capabilities.ConcreteProducts {
         public WebDriverAndroidCapabilities(SaucePlatform platform, string testName) : base(testName) {
             Console.WriteLine(SauceOpsConstants.SETTING_UP, testName, SauceOpsConstants.ANDROID_ON_WEBDRIVER);
             Caps = DesiredCapabilities.Android();
-
-            //See https://github.com/appium/appium-dotnet-driver/wiki/Android-Sample
-            //AndroidDriver<AppiumWebElement> iosd = new AndroidDriver<AppiumWebElement>(Caps);
 
             Caps.SetCapability(SauceOpsConstants.SAUCE_PLATFORM_CAPABILITY, SauceOpsConstants.LINUX);
             Caps.SetCapability(SauceOpsConstants.SAUCE_VERSION_CAPABILITY, platform.BrowserVersion);

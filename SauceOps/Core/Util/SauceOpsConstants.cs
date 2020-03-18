@@ -3,22 +3,6 @@
         //ACTIVATION DETAILS
         internal const string MY_USERNAME = "saucefauge";
         internal static readonly string MY_USERNAME_LOWER = MY_USERNAME.ToLower();
-        internal const string COMPANYNAME = "SauceForge";
-        internal const string EDITION = "Enterprise";
-        internal const string KEYNAME = "SauceryKey";
-        internal const string REGISTRYROOT = @"SOFTWARE\" + COMPANYNAME + BACKSLASH;
-        internal const string LICENCE_DATE_FORMAT = "ddMMyyyy";
-        //internal const string PUBLIC_KEY = "44C9B9B2D6C2D11CBF7CD9DF9C37178462A1CE514FCED53CE9B04561C35614C5E525AEE5E3064CFB68D676522F92992721A60374032A200D07CE956B25B87B81";
-        //internal const string FIRST_KEY = "0CDCF65343FEDEE34702856B251025AD80D4FE58C2481B584D7FB246BAC23A6DB4E44E5654A856F182A673D6953FD42725FAA316DE6A78059DECE599BF233D00";
-        internal const int FREE_TRIAL_PERIOD = 30;
-        internal const int PAID_LICENCE_PERIOD = 366;
-
-        internal const string SOLUTION_MASK = ASTERIX + ".sln";
-        internal const string PROJECT_EXTENSION = ".csproj";
-        internal const string PROJECT_MASK = ASTERIX + PROJECT_EXTENSION;
-        internal const string ASSEMBLYINFO_RELATIVE_PATH = @"\Properties\AssemblyInfo.cs";
-        internal const string ASSEMBLY_FILE_GUID_LINE = "[assembly: Guid";
-        internal const string SOLUTION_FILE_PROJECT_LINE = "Project(";
 
         //TEST URL
         internal const string SAUCELABS_HUB = "http://ondemand.saucelabs.com:80/wd/hub";
