@@ -10,8 +10,8 @@ namespace SauceOps.Core.DataSources
             get
             {
                 //Mobile Platforms
-                yield return new SaucePlatform("android", "android", "chrome", "62.0", "Google Pixel 3 GoogleAPI Emulator", "10.0.", "", "android", "landscape");
-                yield return new SaucePlatform("", "", "safari", "13.0", "iPhone XS Max Simulator", "13.0", "", "iphone", "portrait");
+                yield return new SaucePlatform("android", "android", "chrome", "89.0", "Google Pixel 3 GoogleAPI Emulator", "11.0.", "", "android", "landscape");
+                yield return new SaucePlatform("", "", "Safari", "14.3", "iPhone 12 Pro Simulator", "14.3", "", "iphone", "portrait");
             }
         }
     }
